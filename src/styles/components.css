@@ -1,0 +1,72 @@
+
+@layer components {
+  .heading-lg {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6;
+  }
+  
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold text-primary mb-4;
+  }
+  
+  .paragraph {
+    @apply text-lg leading-relaxed text-slate max-w-3xl;
+  }
+  
+  .nav-link {
+    @apply text-slate hover:text-primary transition-all duration-300;
+  }
+  
+  .section-heading {
+    @apply flex items-center text-2xl md:text-3xl font-semibold text-primary mb-8;
+  }
+  
+  .section-heading::after {
+    content: "";
+    @apply h-px bg-slate-dark flex-grow ml-4;
+  }
+  
+  .project-card {
+    @apply bg-white/90 rounded-lg p-6 transition-all duration-300 hover:translate-y-[-5px] shadow-sm hover:shadow-md;
+  }
+  
+  .highlight-link {
+    @apply text-primary hover:underline transition-all duration-300;
+  }
+
+  /* Enhanced interactive elements */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-md;
+  }
+  
+  .hover-grow {
+    @apply transition-all duration-300 hover:scale-105;
+  }
+  
+  /* Button hover effects */
+  .btn-hover-effect {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-hover-effect::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-0 bg-primary/20 transition-all duration-300;
+  }
+
+  .btn-hover-effect:hover::after {
+    @apply h-full;
+  }
+
+  /* Custom animated link underline */
+  .animated-underline {
+    @apply relative;
+  }
+
+  .animated-underline::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300;
+  }
+
+  .animated-underline:hover::after {
+    @apply w-full;
+  }
+}

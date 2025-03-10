@@ -1,0 +1,133 @@
+
+/* Page transition animations */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Section transition classes */
+.section-container {
+  @apply max-w-5xl mx-auto px-6 md:px-12 py-24 min-h-screen flex flex-col justify-center;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-container.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Enhanced animations for content entrance */
+@keyframes animateIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-in animation for sections */
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button hover animations */
+@keyframes buttonPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(65, 100, 74, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(65, 100, 74, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(65, 100, 74, 0);
+  }
+}
+
+.btn-pulse:hover {
+  animation: buttonPulse 1.5s infinite;
+}
+
+/* Animation classes */
+.animate-in {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
+.animate-in-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-in-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.animate-in-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.section-fade-in {
+  @apply opacity-0;
+  animation: sectionFadeIn 0.8s ease-out forwards;
+}
+
+/* Lazy loading fade-in animation */
+.lazy-load-image {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-load-image.loaded {
+  opacity: 1;
+}

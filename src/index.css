@@ -1,0 +1,5 @@
+
+/* Import CSS modules */
+@import './styles/base.css';
+@import './styles/animations.css';
+@import './styles/components.css';
